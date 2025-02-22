@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_website, only: %i[ show edit update destroy ]
 
   # GET /websites or /websites.json
