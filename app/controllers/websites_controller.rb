@@ -4,7 +4,8 @@ class WebsitesController < ApplicationController
 
   # GET /websites or /websites.json
   def index
-    @websites = current_user.website.all
+    @websites = current_user.websites.all
+    redirect_to new_website_path if @websites.size.zero?
   end
 
   # GET /websites/1 or /websites/1.json
@@ -13,7 +14,7 @@ class WebsitesController < ApplicationController
 
   # GET /websites/new
   def new
-    @website = current_user.website.new
+    @website = current_user.websites.new
   end
 
   # GET /websites/1/edit
@@ -22,7 +23,7 @@ class WebsitesController < ApplicationController
 
   # POST /websites or /websites.json
   def create
-    @website = current_user.website.new(website_params)
+    @website = current_user.websites.new(website_params)
 
     respond_to do |format|
       if @website.save
@@ -61,7 +62,7 @@ class WebsitesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_website
-      @website = current_user.website.find(params.expect(:id))
+      @website = current_user.websites.find(params.expect(:id))
     end
 
     # Only allow a list of trusted parameters through.
