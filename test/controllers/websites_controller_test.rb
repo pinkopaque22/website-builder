@@ -1,8 +1,12 @@
 require "test_helper"
+require "securerandom"
 
 class WebsitesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @website = websites(:one)
+    @website = Website.create!(
+      name: "TestWebsite_#{SecureRandom.uuid}",
+      user_id: User.create!(email: "user_#{SecureRandom.uuid}@example.com", password: "password").id
+    )
   end
 
   test "should get index" do
