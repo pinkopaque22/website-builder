@@ -39,13 +39,13 @@ Rails.application.configure do
   config.action_mailer.perfomr_deliveries = true
 
   config.action_mailer.smtp_settings = {
-  :address              => 'smtp.gmail.com',
-  :port                 => 587,
-  :domain               => 'nitrousapp.com',
-  :user_name            => 'MYEMAIL@gmail.com',
-  :password             => 'password',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "nitrousapp.com",
+  user_name: "MYEMAIL@gmail.com",
+  password: "password",
+  authentication: "plain",
+  enable_starttls_auto: true
 }
 
   # Set localhost to be used by links generated in mailer templates.
