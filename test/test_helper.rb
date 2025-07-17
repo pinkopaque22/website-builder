@@ -2,15 +2,14 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "database_cleaner/active_record"
-require 'bcrypt'
+require "bcrypt"
 
 
 module ActiveSupport
   class ActiveSupport::TestCase
-  # ...
   include Devise::Test::IntegrationHelpers
   end
-  
+
   class TestCase
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)

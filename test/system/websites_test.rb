@@ -2,6 +2,8 @@ require "application_system_test_case"
 
 class WebsitesTest < ApplicationSystemTestCase
   setup do
+    @user = users(:one)
+    sign_in @user
     @website = websites(:one)
   end
 
@@ -14,8 +16,7 @@ class WebsitesTest < ApplicationSystemTestCase
     visit websites_url
     click_on "New website"
 
-    fill_in "Name", with: @website.name
-    fill_in "User", with: @website.user_id
+    fill_in "website_name", with: @website.name
     click_on "Create Website"
 
     assert_text "Website was successfully created"
@@ -24,20 +25,24 @@ class WebsitesTest < ApplicationSystemTestCase
 
   test "should update Website" do
     visit website_url(@website)
-    click_on "Edit this website", match: :firs
+    click_on "Edit this website", match: :first
 
-    fill_in "Name", with: @website.name
-    fill_in "User", with: @website.user_id
+    fill_in "What do you want to call your new website?", with: @website.name
     click_on "Update Website"
 
     assert_text "Website was successfully updated"
     click_on "Back"
   end
 
-  test "should destroy Website" do
-    visit website_url(@website)
-    click_on "Destroy this website", match: :firs
 
-    assert_text "Website was successfully destroyed"
-  end
+
+    test "should destroy Website" do
+      visit website_url(@website)
+
+    page.accept_confirm do
+      click_on "Destroy this website", match: :first
+    end
+
+      assert_text "Website was successfully destroyed"
+    end
 end
