@@ -2,9 +2,15 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "database_cleaner/active_record"
+require 'bcrypt'
 
 
-module ActiveSuppor
+module ActiveSupport
+  class ActiveSupport::TestCase
+  # ...
+  include Devise::Test::IntegrationHelpers
+  end
+  
   class TestCase
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)
@@ -18,7 +24,7 @@ module ActiveSuppor
   class ActiveSupport::TestCase
     setup do
       DatabaseCleaner.strategy = :transaction
-      DatabaseCleaner.star
+      DatabaseCleaner.start
     end
 
     teardown do

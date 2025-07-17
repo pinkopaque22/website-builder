@@ -1,11 +1,14 @@
 require "test_helper"
 require "securerandom"
 
-class WebsitesControllerTest < ActionDispatch::IntegrationTes
+class WebsitesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = users(:one)
+    sign_in @user
+
     @website = Website.create!(
       name: "TestWebsite_#{SecureRandom.uuid}",
-      user_id: User.create!(email: "user_#{SecureRandom.uuid}@example.com", password: "password").id
+      user: @user
     )
   end
 
