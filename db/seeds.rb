@@ -13,5 +13,5 @@ User.find_or_create_by!(email: "admin@example.com") do |user|
 end
 
 Website.find_or_create_by!(name: "Default Website") do |website|
-  website.user = User.first
+  website.user = User.firs
 end

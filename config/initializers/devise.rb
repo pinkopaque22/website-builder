@@ -115,12 +115,12 @@ Devise.setup do |config|
   # For bcrypt, this is the cost for hashing the password and defaults to 12. If
   # using other algorithms, it sets how many times you want the password to be hashed.
   # The number of stretches used for generating the hashed password are stored
-  # with the hashed password. This allows you to change the stretches without
+  # with the hashed password. This allows you to change the stretches withou
   # invalidating existing passwords.
   #
   # Limiting the stretches to just one in testing will increase the performance of
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
-  # a value less than 10 in other environments. Note that, for bcrypt (the default
+  # a value less than 10 in other environments. Note that, for bcrypt (the defaul
   # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 12
@@ -135,13 +135,13 @@ Devise.setup do |config|
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
-  # A period that the user is allowed to access the website even without
+  # A period that the user is allowed to access the website even withou
   # confirming their account. For instance, if set to 2.days, the user will be
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day.
   # You can also set it to nil, which will allow the user to access the website
   # without confirming their account.
-  # Default is 0.days, meaning the user cannot access the website without
+  # Default is 0.days, meaning the user cannot access the website withou
   # confirming their account.
   # config.allow_unconfirmed_access_for = 2.days
 
@@ -159,7 +159,7 @@ Devise.setup do |config|
   # unconfirmed_email column, and copied to email column on successful confirmation.
   config.reconfirmable = true
 
-  # Defines which key will be used when confirming an account
+  # Defines which key will be used when confirming an accoun
   # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
@@ -172,7 +172,7 @@ Devise.setup do |config|
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
 
-  # Options to be passed to the created cookie. For instance, you can set
+  # Options to be passed to the created cookie. For instance, you can se
   # secure: true in order to force SSL only cookies.
   # config.rememberable_options = {}
 
@@ -180,7 +180,7 @@ Devise.setup do |config|
   # Range for password length.
   config.password_length = 6..128
 
-  # Email regex used to validate email formats. It simply asserts that
+  # Email regex used to validate email formats. It simply asserts tha
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
@@ -196,7 +196,7 @@ Devise.setup do |config|
   # :none            = No lock strategy. You should handle locking by yourself.
   # config.lock_strategy = :failed_attempts
 
-  # Defines which key will be used when locking and unlocking an account
+  # Defines which key will be used when locking and unlocking an accoun
   # config.unlock_keys = [:email]
 
   # Defines which strategy will be used to unlock an account.
@@ -218,7 +218,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :recoverable
   #
-  # Defines which key will be used when recovering the password for an account
+  # Defines which key will be used when recovering the password for an accoun
   # config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
@@ -234,10 +234,10 @@ Devise.setup do |config|
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
   # You can use :sha1, :sha512 or algorithms from others authentication tools as
   # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20
-  # for default behavior) and :restful_authentication_sha1 (then you should set
+  # for default behavior) and :restful_authentication_sha1 (then you should se
   # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).
   #
-  # Require the `devise-encryptable` gem when using anything other than bcrypt
+  # Require the `devise-encryptable` gem when using anything other than bcryp
   # config.encryptor = :sha512
 
   # ==> Scopes configuration
@@ -246,11 +246,11 @@ Devise.setup do |config|
   # are using only default views.
   # config.scoped_views = false
 
-  # Configure the default scope given to Warden. By default it's the first
+  # Configure the default scope given to Warden. By default it's the firs
   # devise role declared in your routes (usually :user).
   # config.default_scope = :user
 
-  # Set this configuration to false if you want /users/sign_out to sign out
+  # Set this configuration to false if you want /users/sign_out to sign ou
   # only the current scope. By default, Devise signs out all scopes.
   # config.sign_out_all_scopes = true
 

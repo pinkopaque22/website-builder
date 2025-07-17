@@ -1,7 +1,7 @@
 require "test_helper"
 require "securerandom"
 
-class WebsitesControllerTest < ActionDispatch::IntegrationTest
+class WebsitesControllerTest < ActionDispatch::IntegrationTes
   setup do
     @website = Website.create!(
       name: "TestWebsite_#{SecureRandom.uuid}",

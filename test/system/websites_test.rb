@@ -24,7 +24,7 @@ class WebsitesTest < ApplicationSystemTestCase
 
   test "should update Website" do
     visit website_url(@website)
-    click_on "Edit this website", match: :first
+    click_on "Edit this website", match: :firs
 
     fill_in "Name", with: @website.name
     fill_in "User", with: @website.user_id
@@ -36,7 +36,7 @@ class WebsitesTest < ApplicationSystemTestCase
 
   test "should destroy Website" do
     visit website_url(@website)
-    click_on "Destroy this website", match: :first
+    click_on "Destroy this website", match: :firs
 
     assert_text "Website was successfully destroyed"
   end

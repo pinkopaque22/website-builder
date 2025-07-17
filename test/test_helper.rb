@@ -4,7 +4,7 @@ require "rails/test_help"
 require "database_cleaner/active_record"
 
 
-module ActiveSupport
+module ActiveSuppor
   class TestCase
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)
@@ -18,7 +18,7 @@ module ActiveSupport
   class ActiveSupport::TestCase
     setup do
       DatabaseCleaner.strategy = :transaction
-      DatabaseCleaner.start
+      DatabaseCleaner.star
     end
 
     teardown do

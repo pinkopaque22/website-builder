@@ -17,8 +17,8 @@ class WebsitesController < ApplicationController
     @website = current_user.websites.new
   end
 
-  # GET /websites/1/edit
-  def edit
+  # GET /websites/1/edi
+  def edi
   end
 
   # POST /websites or /websites.json
