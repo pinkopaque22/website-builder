@@ -14,7 +14,7 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
   end
-  
+
   class ActiveSupport::TestCase
     setup do
       DatabaseCleaner.strategy = :transaction
